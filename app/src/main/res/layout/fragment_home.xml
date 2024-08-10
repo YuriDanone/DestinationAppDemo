@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="33dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/welcomeCard"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_marginVertical="12dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCourses"
+            app:cardCornerRadius="25dp">
+
+<!--            <EditText-->
+<!--                android:id="@+id/largeEditText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:gravity="top|start"-->
+<!--                android:scrollbars="vertical"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:padding="16dp"-->
+<!--                android:inputType="textMultiLine"-->
+<!--                android:imeOptions="flagNoEnterAction"-->
+<!--                android:maxLines="100"-->
+<!--                android:overScrollMode="always"-->
+<!--                android:hint="Enter text here..."-->
+<!--                android:textSize="16sp"-->
+<!--                android:textIsSelectable="true" />-->
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/welcome_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/welcome_img"/>
+
+        </androidx.cardview.widget.CardView>
+
+<!--        <TextView-->
+<!--            android:id="@+id/wordCountTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:text="Word count: 0"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/welcomeCard"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginStart="24dp"/>-->
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerCourses"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tvCourses"-->
+<!--            tools:listitem="@layout/item_list"/>-->
+
+        <TextView
+            android:id="@+id/tvTest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listening"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeCard"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHome"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/listening_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTest1"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTest2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reading"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewHome"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHome2"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/reading_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTest2"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTest3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Writing"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewHome2"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHome3"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/writing_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTest3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="24dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

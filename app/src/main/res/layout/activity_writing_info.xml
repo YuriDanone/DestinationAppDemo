@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WritingInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvListening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Writing"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="25dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tvPart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Part 1"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="25dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvListening"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.example.diplomatest.AspectRatioImageView
+            android:id="@+id/part_img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPart1"
+            app:layout_constraintBottom_toTopOf="@id/tvPart2"/>
+
+        <TextView
+            android:id="@+id/tvPart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Part 2"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="25dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintTop_toBottomOf="@id/part_img1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.example.diplomatest.AspectRatioImageView
+            android:id="@+id/part_img2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPart2"
+            />
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/answers"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/part_img2"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lLeT1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/answers"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                android:layout_marginHorizontal="8dp"-->
+<!--                android:orientation="vertical">-->
+
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Task 1"-->
+<!--                    android:textSize="25dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:layout_marginVertical="10dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/et1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="275dp"-->
+<!--                    android:text=""-->
+<!--                    android:textSize="22dp"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:background="@drawable/bg"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="top|start"-->
+<!--                    android:scrollbars="vertical"-->
+<!--                    android:overScrollMode="always"-->
+<!--                    android:imeOptions="flagNoEnterAction"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/wordCount1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:text="Word count: 0"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:layout_marginTop="8dp"/>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lLeT2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/answers"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                android:layout_marginHorizontal="8dp"-->
+<!--                android:orientation="vertical">-->
+
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Task 2"-->
+<!--                    android:textSize="25dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:layout_marginVertical="10dp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/et2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="275dp"-->
+<!--                    android:text=""-->
+<!--                    android:textSize="22dp"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:background="@drawable/bg"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="top|start"-->
+<!--                    android:scrollbars="vertical"-->
+<!--                    android:overScrollMode="always"-->
+<!--                    android:imeOptions="flagNoEnterAction"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/wordCount2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:text="Word count: 0"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:layout_marginHorizontal="8dp"-->
+<!--                    android:layout_marginTop="8dp"/>-->
+
+
+<!--            </LinearLayout>-->
+
+
+
+<!--        </LinearLayout>-->
+
+        <Button
+            android:id="@+id/fill_answers_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="8dp"
+            android:text="Fill the answers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/part_img2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
